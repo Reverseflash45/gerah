@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gerah — Indonesia makin panas, 1950–2024</title>
+    <meta
+      name="description"
+      content="Garis hangat Indonesia: suhu rata-rata setiap tahun sejak 1950, berapa derajat lebih panas sejak tahun kamu lahir, kalender panas bulanan, serta hari panas dan malam tropis, dari reanalisis ERA5."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gerah.vercel.app/" />
+    <meta property="og:title" content="Gerah — Indonesia makin panas" />
+    <meta property="og:description" content="Setiap garis satu tahun. Berapa derajat lebih panas sejak kamu lahir?" />
+    <meta property="og:image" content="https://gerah.vercel.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://gerah.vercel.app/" />
+    <meta name="theme-color" content="#f6f4f0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/ikon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="garis-utama" id="garis-utama" role="img" aria-label="Garis hangat Indonesia 1950–2024: satu garis per tahun, biru lebih sejuk dan merah lebih panas daripada rata-rata 1961–1990."></div>
+
+    <header class="kepala">
+      <a class="merek" href="/">Gerah</a>
+      <nav><a href="#lahir">Sejak kamu lahir</a><a href="#bulan">Kalender panas</a><a href="#tentang">Tentang</a></nav>
+    </header>
+
+    <main>
+      <section class="pembuka" aria-labelledby="judul">
+        <p class="label">Suhu rata-rata Indonesia · <span data-rentang>1950–2024</span></p>
+        <h1 id="judul" data-judul>2024, tahun terpanas Indonesia.</h1>
+        <p class="lead" data-lead></p>
+        <ul class="angka-kunci" data-kunci></ul>
+      </section>
+
+      <section class="bagian" id="lahir" aria-labelledby="judul-lahir">
+        <p class="label">Sejak kamu lahir</p>
+        <h2 id="judul-lahir">Berapa derajat lebih <em>gerah?</em></h2>
+        <form class="isian-lahir" id="isian-lahir">
+          <label for="tahun-lahir">Tahun lahirmu</label>
+          <input id="tahun-lahir" type="number" inputmode="numeric" min="1900" max="2024" step="1" />
+        </form>
+        <div class="hasil-lahir" aria-live="polite">
+          <p class="kalimat-lahir" data-kalimat-lahir></p>
+          <div class="garis-kecil-lahir" id="garis-lahir" role="img"></div>
+          <ul class="ubin" data-ubin-lahir></ul>
+        </div>
+      </section>
+
+      <section class="bagian" aria-labelledby="judul-tahun">
+        <p class="label">Setiap tahun</p>
+        <h2 id="judul-tahun">Lebih panas dari rata-rata, <em>hampir setiap tahun</em></h2>
+        <p class="pengantar" data-pengantar-tahun></p>
+        <div class="grafik" id="grafik-batang"></div>
+      </section>
+
+      <section class="bagian" id="bulan" aria-labelledby="judul-bulan">
+        <p class="label">Kalender panas</p>
+        <h2 id="judul-bulan">Setiap bulan sejak <em>1950</em></h2>
+        <p class="pengantar" data-pengantar-bulan></p>
+        <div class="grafik" id="kalender" role="img" aria-label="Anomali suhu bulanan Indonesia 1950–2024, dibandingkan bulan yang sama pada 1961–1990"></div>
+      </section>
+
+      <section class="bagian" aria-labelledby="judul-hari">
+        <p class="label">Hari panas dan malam gerah</p>
+        <h2 id="judul-hari">Siang lebih terik, malam tak lagi <em>sejuk</em></h2>
+        <div class="kembar">
+          <div>
+            <p class="judul-grafik">Hari dengan suhu maksimum di atas 30 °C, per tahun</p>
+            <div class="grafik" id="grafik-hari"></div>
+          </div>
+          <div>
+            <p class="judul-grafik">Malam tropis (suhu minimum di atas 20 °C), per tahun</p>
+            <div class="grafik" id="grafik-malam"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bagian tentang" id="tentang" aria-labelledby="judul-tentang">
+        <h2 id="judul-tentang">Tentang data</h2>
+        <ul>
+          <li data-sumber></li>
+          <li>
+            Angka di sini adalah rata-rata seluruh wilayah Indonesia pada grid ERA5 0,25°, hasil reanalisis yang menggabungkan
+            pengamatan dengan model cuaca, bukan catatan satu stasiun. Kota bisa jauh lebih panas, misalnya karena efek pulau
+            panas perkotaan.
+          </li>
+          <li>
+            Anomali dihitung terhadap rata-rata 1961–1990, periode acuan iklim yang lazim dipakai. Perbandingan "sejak kamu
+            lahir" memakai rata-rata lima tahun di sekitar tahun lahir dan lima tahun terakhir, supaya tidak bergantung pada
+            satu tahun yang kebetulan panas atau sejuk, misalnya karena El Niño.
+          </li>
+          <li>
+            Garis hangat mengikuti gaya #ShowYourStripes karya Ed Hawkins (University of Reading). Untuk data iklim resmi
+            Indonesia, rujukannya <a href="https://www.bmkg.go.id/">BMKG</a>.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="kaki">
+      <p>Dibuat oleh Rafi Fernandito · <a href="https://github.com/Reverseflash45/gerah">kode sumber</a></p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
