@@ -1,5 +1,4 @@
-import "@fontsource-variable/sora";
-import "@fontsource-variable/source-sans-3";
+import "@fontsource-variable/schibsted-grotesk";
 import "./gaya.css";
 import { AKHIR, AWAL, BULAN, DIUNDUH, SUMBER, TAHUN, anomali, anomaliBulan, bertanda, desimal, nilai, rata, sejakLahir, trenPerDekade, urutTerpanas } from "./analisis";
 import { gambarBatang, gambarGaris, gambarGarisKecil, gambarKalender } from "./vis";

@@ -1,30 +1,17 @@
 :root {
+  /* putih bersih; satu-satunya warna di halaman datang dari garis hangat */
   color-scheme: light;
-  --kertas: #f6f4f0;
-  --kertas-2: #ece9e2;
-  --tinta: #1b1b1b;
-  --tinta-2: #45433f;
-  --samar: #67645e;
-  --garis: #d9d5cc;
-  --garis-kuat: #b5b0a5;
-  --aksen: #b3261e;
-  --sorot: #2f4fa3;
-  --judul: "Sora Variable", system-ui, sans-serif;
-  --huruf: "Source Sans 3 Variable", system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --kertas: #121212;
-    --kertas-2: #1c1c1c;
-    --tinta: #eeece8;
-    --tinta-2: #c6c3bd;
-    --samar: #9a968f;
-    --garis: #2c2c2c;
-    --garis-kuat: #444;
-    --aksen: #ff7a6b;
-    --sorot: #8fb0ff;
-  }
+  --kertas: #ffffff;
+  --kertas-2: #f2f2f2;
+  --tinta: #0e0e0e;
+  --tinta-2: #3d3d3d;
+  --samar: #5e5e5e;
+  --garis: #e2e2e2;
+  --garis-kuat: #0e0e0e;
+  --aksen: #b3121b;
+  --sorot: #08519c;
+  --judul: "Schibsted Grotesk Variable", "Arial Black", sans-serif;
+  --huruf: "Schibsted Grotesk Variable", system-ui, sans-serif;
 }
 
 *,
@@ -63,14 +50,15 @@ input {
 h1,
 h2 {
   font-family: var(--judul);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 h1 {
   margin: 12px 0 0;
-  font-size: clamp(38px, 6.4vw, 80px);
-  line-height: 1.02;
-  max-width: 16ch;
+  font-size: clamp(44px, 8.6vw, 128px);
+  line-height: 0.92;
+  max-width: 14ch;
 }
 h2 {
   margin: 8px 0 0;
@@ -85,7 +73,7 @@ h2 em {
 /* ---------- garis hangat utama ---------- */
 .garis-utama {
   position: relative;
-  height: clamp(180px, 42vh, 440px);
+  height: clamp(220px, 58vh, 640px);
 }
 .garis-utama svg,
 .garis-kecil-lahir svg {
@@ -106,12 +94,12 @@ main,
   align-items: center;
   gap: 16px;
   padding: 16px 0;
-  border-bottom: 1px solid var(--garis-kuat);
+  border-bottom: 3px solid var(--garis-kuat);
 }
 .merek {
   text-decoration: none;
-  font: 800 26px/1 var(--judul);
-  letter-spacing: -0.04em;
+  font: 900 28px/1 var(--judul);
+  letter-spacing: -0.05em;
 }
 .kepala nav {
   display: flex;
@@ -146,7 +134,8 @@ main,
 }
 .angka-kunci strong {
   display: block;
-  font: 700 clamp(26px, 3vw, 36px) / 1.1 var(--judul);
+  font: 900 clamp(28px, 3.4vw, 42px) / 1 var(--judul);
+  letter-spacing: -0.03em;
   letter-spacing: -0.03em;
 }
 .angka-kunci span {
