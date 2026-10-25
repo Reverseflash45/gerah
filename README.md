@@ -2,7 +2,7 @@
 
 ![Gerah: 2024, tahun terpanas Indonesia](public/og.png)
 
-**[Buka Gerah](https://gerah.vercel.app)**
+**[Buka Gerah](https://gerah.raffstw.my.id)**
 
 Garis hangat Indonesia: suhu rata-rata seluruh wilayah Indonesia setiap tahun sejak 1950, dari
 reanalisis ERA5. Biru lebih sejuk dan merah lebih panas daripada rata-rata 1961–1990.
